@@ -1,0 +1,516 @@
+body{
+    background: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .headerbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: auto;
+    align-content: start;
+  }
+  
+  .logobox {
+    border: 2px solid green;
+    border-radius: 20px;
+  }
+  
+  .logo img {
+    height: 15px;
+    width: 15px;
+  }
+
+
+  /* title */
+  
+  .headerbox > .title {
+    height: 20px;
+    margin: auto;
+  }
+  
+  .title h1 {
+    margin-top: auto;
+    font-size: 48px;
+    color: olivedrab;
+    animation: h1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif cursive;
+  }
+  
+  .title h2 {
+    margin-top: auto;
+    animation: h2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* title animation */
+  @keyframes h1 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(350%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes h2 {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateX(550%);
+    }
+  
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+ /* slide show */
+.stage {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    }
+    
+.slidewrapper {
+    width: 400%;
+    height: 100%;
+    animation: slideshow 10s infinite;
+    }
+    
+@keyframes slideshow {
+  
+    0% {
+      margin-left: 0;
+    }
+  
+    33% {
+        margin-left: -100%;
+    }
+
+    66% {
+      margin-left: -200%;
+    }
+
+    100% {
+      margin-left: -300%;
+    }
+  }
+  
+  .stage >div >div {
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    float: left;
+    padding-top: .6rem;
+  }
+  
+  
+  @media screen and (max-width: 950px) {
+    .stage > div >div > p {
+        font-size: 20px;
+      }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .stage > div > div > p {
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .stage {
+      margin-top: 5rem;
+    }
+  }
+  
+  .s1 {
+    background-color: lightpink;
+  }
+  
+  .s2 {
+    background-color: lightsalmon;
+  }
+  
+  .s3 {
+    background-color: lightcoral;
+  }
+
+  /* hero-image section*/
+
+  .hero-image1 {
+    position: relative;
+  }
+  
+  .img {
+    width: 100%;
+    height: 30%;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .hero-box1 {
+    position: absolute;
+    width: 40%;
+    border: 4px solid white;
+    padding: 20px;
+    top: 0;
+    background-color: lightgray;
+    margin-top: 50%;
+    margin-left: 10%;
+  }
+
+  /* 2 by 1 section */
+
+  .column-parent {
+    width: 40%;
+    margin: left;
+    display: column;
+    column-gap: 10%;
+  }
+  
+  .column-parent > .column-child-img {
+    width: 100%;
+    height: 23rem;
+    background-image: url(./images/intro_img1.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.6;
+  }
+  
+  .column-child-img > .img-text {
+    position: relative;
+    border: 2px solid olive;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin: 8% 8%;
+    width: 50%;
+    display: block;
+  }
+  
+  .column-parent > .column-text {
+    position: relative;
+    background: lightgray;
+    width: 100%;
+    height: 23rem;
+    border: 2px solid purple;
+    color: olivedrab;
+    display: grid;
+  }
+  
+  .column-parent > .column-text > h3, p {
+    width: 85%;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 5%;
+  }
+  
+  .column-parent > .column-text > h3 {
+    margin-top: 3rem;
+  
+  }
+  .column-parent > .column-text > p {
+    display: block;
+  }
+  
+  /* Productrow */
+
+  .lotion {
+    height: 3rem;
+    border-bottom: 3px solid lightseagreen;
+    margin-top: 10%;
+  }
+  
+  .lotion-title {
+    margin-left: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .item-parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  
+  .item-parent > div > img {
+    height: 80%;
+  }
+  
+  .item {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .item > span {
+    text-align: center;
+  }
+  
+  .item > h5 {
+    color: olive;
+    margin-top: -20%;
+  }
+  
+  .item > h6 {
+    margin-top: -10%;
+  }
+  
+  .item > span, a {
+    margin-bottom: 5%;
+  }
+  
+  .item > a {
+    background-color: black;
+    width: 75%;
+    margin-left: 12%;
+    padding: 1rem 0;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+  }
+  
+  .item > a:hover {
+    background-color: pink;
+    color: black;
+    transition: ease-in-out .3s;
+    font-weight: bolder;
+  }
+  
+  .item-mdl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightcyan;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .item-mdl:target {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .item-md {
+    position: relative;
+    background: white;
+    margin: auto;
+    width: 50%;
+    height: 36rem;
+    margin-top: 5rem;
+  }
+  
+  .item-md > p, a {
+    display: inline-block;
+    margin-bottom: 2px solid blue;
+    width: 100%;
+  }
+  
+  .item-md > p {
+    text-align: left;
+    margin-left: 0;
+    border-bottom: 3px solid lightgray;
+    padding-bottom: 1rem;
+    width: 80%;
+  }
+  
+  .item-md > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    text-decoration: none;
+    width: 2%;
+    padding: 1%;
+    font-size: 1em;
+    background-color: lightsalmon;
+  }
+  
+  .itm-1 > p {
+    font-size: 1.2em;
+  }
+  
+  .modal-info {
+    width: 80%;
+    margin: 0 auto;
+    height: 20rem;
+  }
+  
+  .modal-info > img, p {
+    display: inline;
+  }
+  
+  .modal-info > p, span {
+    display: block;
+    text-align: left;
+    margin: 5%;
+  }
+  
+  .modal-info > img {
+    height: 85%;
+    width: 45%;
+    float: left;
+  }
+  
+  .modal-info > p {
+    font-size: 1.2em;
+  }
+  
+  
+  .modal-info > .bottom {
+    margin-bottom: 5%;
+    white-space: nowrap;
+  }
+  
+  .modal-btm {
+    background: lightgray;
+    padding: 1em;
+    height: auto;
+    margin-top: -6%;
+    margin-bottom: 3rem;
+  }
+  
+  .modal-btm > p, a {
+    display: block;
+    width: 85%;
+    text-align: left;
+    margin: 0 auto;
+  }
+  
+  .modal-btm > p {
+    border-bottom: 3px solid white;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    font-size: 1.2em;
+  }
+  
+  .modal-btm > a {
+    text-decoration: none;
+    background-color: white;
+    width: 11rem;
+    padding: 10px;
+    text-align: center;
+    margin-left: 7.5%;
+    color: black;
+  }
+  
+  .gift-set {
+    height: 40rem;
+  }
+  
+  .gift-set-info > img {
+    padding: 1rem;
+    height: 65%;
+  }
+  
+  @media screen and (max-width: 950px) {
+    .item-md {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .gift-set-info > .gift-set-price {
+      margin-left: 55%;
+    }
+  }
+  
+  /* Footer */
+
+  footer {
+    background-color: black;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+  }
+  
+  .footer-div {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-bottom: 3px solid white;
+    padding: 3.5rem 0;
+  }
+  
+  .table th {
+    width: 25%;
+  }
+  
+  .table th {
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  .table td {
+    text-align: center;
+  }
+  
+  td > a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
+
+  
+  
+  .footer-div > h6 {
+    text-align: right;
+    margin-top: 3rem;
+    font-size: 30px;
+    }
+  
+
+  ul {
+    text-align: right;
+    list-style: none;
+  }
+  
+  ul > li {
+    display: inline-block;
+    margin: 0 1.5rem;
+  }
+  
+  ul > li > a {
+    color: white;
+    font-size: 2rem;
+  }
+  
+  ul > li > a {
+    color: antiquewhite;
+  }
+
+  ul {
+    width: 100%;
+    text-align: right;
+  }
+
+  .footer-p {
+    margin-top: 10rem;
+  }
+  
+  .footer-p > p {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+  }
